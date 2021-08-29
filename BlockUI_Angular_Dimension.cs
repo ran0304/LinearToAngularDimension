@@ -420,7 +420,7 @@ public class BlockUI_Angular_Dimension
             string[] dimText;
             string[] dualDimText;
             angularDimension1.GetDimensionText(out dimText, out dualDimText);
-            //theUI.NXMessageBox.Show("Dimension Text", NXMessageBox.DialogType.Information, dimText[0]);
+            //theUI.NXMessageBox.Show("Dimension Text", NXMessageBox.DialogType.Information, dimText[0]);			
 
             double perim1 = AnglePerUnit(drumDia.Value);
             string[] value = new string[1];
@@ -430,7 +430,6 @@ public class BlockUI_Angular_Dimension
 
             angularDimension1.SetDimensionText(value);
             linearDimensionBuilder1.Destroy();
-
 
             Session.UndoMarkId markId3 = theSession.SetUndoMark(Session.MarkVisibility.Visible, "Overriden finshed");
             theSession.UpdateManager.DoUpdate(markId3);
